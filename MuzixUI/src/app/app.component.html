@@ -1,0 +1,15 @@
+<mat-toolbar color="accent">
+  <span>Muzix</span>
+  <button mat-button [routerLink]="['/music/gettoptracks']">Top Tracks</button>
+  <button mat-button [routerLink]="['/music/playlist']">Playlist</button>
+  <button class="search-button" mat-button [routerLink]="['/music/search']">Search</button>
+
+
+  <span class="fill-space"></span>
+  <span>
+    <button *ngIf="!auth.isTokenExpired()" mat-button (click)="logout()">Logout</button>
+    <button *ngIf="auth.isTokenExpired()" mat-button (click)="logout()">Login</button>
+  </span>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

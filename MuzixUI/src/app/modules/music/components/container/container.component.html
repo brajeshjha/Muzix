@@ -1,0 +1,7 @@
+<div class="music-container">
+  <music-thumbnail *ngFor="let music of musics" 
+    [music]="music" 
+    [usePlaylistApi]="usePlaylistApi"
+    (addMusic)="addToPlaylist($event)" 
+    (deleteMusic)="deleteFromPlaylist($event)"></music-thumbnail>
+</div>

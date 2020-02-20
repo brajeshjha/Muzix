@@ -1,0 +1,34 @@
+.music-thumbnail{
+    width:230px;
+    height: auto;
+    margin:10px;
+    align-items: center;
+
+}
+
+.music-header{
+    height:70px;
+}
+
+
+.music-image{
+    height:280px;
+}
+
+.music-overview {
+    height: 50px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+.music-overview  {
+   height: 50px;
+   
+}
+
+.music-actions{
+    text-align: right;
+}
+
+

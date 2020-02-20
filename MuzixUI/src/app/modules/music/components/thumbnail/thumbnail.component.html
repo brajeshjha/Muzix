@@ -1,0 +1,16 @@
+<mat-card class="music-thumbnail">
+  <mat-card-header class="music-header">
+    <mat-card-title class="musicName">{{music?.name}}</mat-card-title>
+    <mat-card-subtitle>{{music?.artistName}}</mat-card-subtitle>
+  </mat-card-header>
+  <img class="music-image" mat-card-image [src]="music?.imageUrl" [alt]="music?.name">
+  <mat-card-content class="music-overview">
+    Number of Plays: <br> {{music?.playcount}}
+  </mat-card-content>
+  <mat-card-actions class="music-actions">
+    <button class="addButton" *ngIf="!usePlaylistApi" mat-raised-button color="primary" (click)="addToPlaylist()">Add To
+      Playlist</button>
+    <button color="warn" *ngIf="usePlaylistApi" mat-raised-button color="primary"
+      (click)="deleteFromPlaylist()">Delete</button>
+  </mat-card-actions>
+</mat-card>
