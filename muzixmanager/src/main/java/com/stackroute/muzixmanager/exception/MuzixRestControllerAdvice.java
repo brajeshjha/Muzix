@@ -6,8 +6,12 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @RestControllerAdvice
 public class MuzixRestControllerAdvice {
 
-	@ExceptionHandler(value = {SongAlreadyExistsException.class})
-	public String SongAlreadyExistsException(SongAlreadyExistsException s) {
+	@ExceptionHandler(value = {MusicTrackAlreadyExistsException.class})
+	public String musicAlreadyExistsException(MusicTrackAlreadyExistsException s) {
+		return s.getMessage();
+	}
+	@ExceptionHandler(value = {MusicTrackNotFoundException.class})
+	public String musicTrackNotFoundException(MusicTrackNotFoundException s) {
 		return s.getMessage();
 	}
 
@@ -17,3 +21,4 @@ public class MuzixRestControllerAdvice {
 	}
 
 }
+
